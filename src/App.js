@@ -5,6 +5,8 @@ import firebase, { auth, provider } from './firebase.js';
 import Button from './Components/Button/Button';
 import Login from './Components/Login/Login';
 import { connect } from 'react-redux';
+import { Route, Switch } from 'react-router-dom';
+
 
 class App extends Component {
     constructor() {
@@ -26,8 +28,6 @@ class App extends Component {
         
             
     };
-
-    
 
     firstNameChange(event) {
         this.props.firstNameDispatch(event.target.value);
@@ -54,7 +54,9 @@ class App extends Component {
                 + this.props.lastName
         }
         itemsRef.push(item);
-       
+        this.setState({
+            user: true
+        })
     }
 
     logout() {
@@ -86,6 +88,7 @@ class App extends Component {
                 
                 
                 
+                
                 {this.state.user ?
                     <div>
                     <div>
@@ -104,13 +107,14 @@ class App extends Component {
                             first={this.props.firstName}
                             middle={this.props.middleName}
                             last={this.props.lastName} />
-
-                    <Button submit={this.handleSubmit} function="Register" />
+                        
+                            <Button submit={this.handleSubmit} function="Register" />
+                        
                     <Login />
                         <Button submit={this.login} function="Login" />
-                    </div>
+                        </div>
                 }
-                     
+                  
             </div>
         );
     };

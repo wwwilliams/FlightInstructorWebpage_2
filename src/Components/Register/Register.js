@@ -14,6 +14,7 @@ function Register(props) {
                     <div className="three fields">
                         <div className="field">
                             <label>First name</label>
+
                             <input type="text" placeholder="First Name" onChange={props.firstNameChange} value={props.first}/>
                         </div>
                         <div className="field">

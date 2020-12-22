@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { createStore, compose } from 'redux';
 import reducer from './store/reducers/reducer';
+import { BrowserRouter } from "react-router-dom";
 
 const enhancers = compose(
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
@@ -13,11 +14,14 @@ const enhancers = compose(
 const store = createStore(reducer, enhancers);
 
 ReactDOM.render(
+    <BrowserRouter>
     <Provider store={store}>
   <React.StrictMode>
     <App />
         </React.StrictMode>
-        </Provider>,
+        </Provider>
+    </BrowserRouter>
+    ,
   document.getElementById('root')
 );
 

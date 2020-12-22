@@ -6,11 +6,12 @@
     "\\src\\Components\\Register",
     "\\src\\hoc",
     "\\src\\hoc\\Auxillary",
+    "\\src\\hoc\\Routes",
     "\\src\\images",
     "\\src\\store",
     "\\src\\store\\actions",
     "\\src\\store\\reducers"
   ],
-  "SelectedNode": "\\src\\App.js",
+  "SelectedNode": "\\src\\Components\\Register\\Register.js",
   "PreviewInSolutionExplorer": false
 }
