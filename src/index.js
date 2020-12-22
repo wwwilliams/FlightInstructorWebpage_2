@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import { createStore, compose } from 'redux';
+import reducer from './store/reducers/reducer';
+
+const enhancers = compose(
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+const store = createStore(reducer, enhancers);
 
 ReactDOM.render(
+    <Provider store={store}>
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+        </React.StrictMode>
+        </Provider>,
   document.getElementById('root')
 );
 
