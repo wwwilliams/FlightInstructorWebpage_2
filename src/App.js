@@ -5,7 +5,6 @@ import firebase, { auth, provider } from './firebase.js';
 import Button from './Components/Button/Button';
 import Login from './Components/Login/Login';
 import { connect } from 'react-redux';
-import { Route, Switch } from 'react-router-dom';
 
 
 class App extends Component {
